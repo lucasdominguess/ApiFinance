@@ -1,0 +1,15 @@
+# Usa imagem leve do Python 3.10
+FROM python:3.11-slim
+
+# Define diretório padrão dentro do container
+WORKDIR /app
+
+# Copia o requirements e instala pacotes
+COPY ./app
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o restante dos arquivos (pode usar volume também)
+COPY . /app
+
+# Comando padrão (mantém container vivo)
+CMD ["tail", "-f", "/dev/null"]

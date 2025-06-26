@@ -1,0 +1,2 @@
+2025-06-25 19:46:56,873 - ERROR - telegrambot - 
+Detalhes do erro: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
