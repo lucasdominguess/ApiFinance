@@ -9,7 +9,7 @@ from log_config import setup_logging
 logger = setup_logging("main")
 dotenv.load_dotenv()
 keyApi = os.getenv('API_TOKEN')
-preco_alvo = int(os.getenv('PRICE_SEARCH', 5))  # Valor alvo para o preço das ações
+preco_alvo = float(os.getenv('PRICE_SEARCH', 5))  # Valor alvo para o preço das ações
 acoes_abaixo_10_json = {}
 acoes_abaixo_10_csv = []
 
@@ -40,7 +40,7 @@ try:
             msg = f'Ticker: {tick} Preço atual R$:{Price} \n'
             # print(msg)
             acoes_abaixo_10_json[tick] = Price
-            # bot.send_message(f' Ticker: {tick} Preço atual R$:{Price} \n')
+            bot.send_message(f' Ticker: {tick} Preço atual R$:{Price} \n')
             
             # Adiciona os dados ao arquivo json
             with open("acoes_abaixo_10.json", "w", encoding="utf-8") as f:

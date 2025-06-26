@@ -1,9 +1,7 @@
 {
-    "SNLG11.SA": 0.74,
-    "QUAL3.SA": 1.89,
-    "MTRE3.SA": 3.9,
-    "PETR4.SA": 31.52,
-    "SEQL3.SA": 0.96,
-    "DASA3.SA": 1.31,
+    "SNLG11.SA": 0.66,
+    "PETR4.SA": 31.46,
+    "SEQL3.SA": 0.94,
+    "DASA3.SA": 1.33,
     "RNEW4.SA": 0.91
 }
