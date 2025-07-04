@@ -1,7 +1,23 @@
 {
-    "SNLG11.SA": 0.66,
-    "PETR4.SA": 31.46,
-    "SEQL3.SA": 0.94,
-    "DASA3.SA": 1.33,
-    "RNEW4.SA": 0.91
+    "SNLG11.SA": 0.76,
+    "BPAN4.SA": 7.81,
+    "BEES3.SA": 8.69,
+    "BEES4.SA": 8.7,
+    "QUAL3.SA": 1.81,
+    "MTRE3.SA": 4.03,
+    "JHSF3.SA": 5.27,
+    "PETR4.SA": 32.16,
+    "KEPL3.SA": 8.2,
+    "SEQL3.SA": 1.18,
+    "CASH3.SA": 7.0,
+    "DASA3.SA": 1.38,
+    "RNEW4.SA": 0.96,
+    "CAML3.SA": 5.22,
+    "JSLG3.SA": 6.0,
+    "VGIR11.SA": 9.7,
+    "BTCI11.SA": 9.25,
+    "KNSC11.SA": 8.84,
+    "WHGR11.SA": 8.79,
+    "GARE11.SA": 8.98,
+    "XPSF11.SA": 6.08
 }

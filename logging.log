@@ -20,3 +20,67 @@
 2025-06-26 18:11:19,806 - INFO - main - Iniciando busca das ações
 2025-06-26 18:11:49,766 - INFO - main - Tickets abaixo de R$1.5 adicionados aos arquivos JSON e CSV
 2025-06-26 18:11:49,766 - INFO - main - Busca das ações concluida
+2025-07-04 09:16:35,657 - INFO - main - Iniciando busca das ações
+2025-07-04 09:17:13,059 - ERROR - main - Erro ao obter informações da ação: yfinance.Ticker object <WHGR11 .SA> 
+ Detalhes do erro: HTTP Error 404: 
+2025-07-04 09:19:23,422 - INFO - main - Iniciando busca das ações
+2025-07-04 09:19:53,323 - INFO - main - Tickets abaixo de R$1.5 adicionados aos arquivos JSON e CSV
+2025-07-04 09:19:53,663 - INFO - main - Busca das ações concluida
+2025-07-04 09:20:54,337 - INFO - main - Iniciando busca das ações
+2025-07-04 09:21:09,517 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-07-04 09:21:12,012 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-07-04 09:21:13,851 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-07-04 09:21:15,023 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2025-07-04 09:21:22,335 - INFO - main - Tickets abaixo de R$1.5 adicionados aos arquivos JSON e CSV
+2025-07-04 09:21:22,661 - INFO - main - Busca das ações concluida
+2025-07-04 09:33:13,527 - INFO - main - Iniciando busca das ações
+2025-07-04 09:33:15,175 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:33:42,447 - INFO - main - Tickets abaixo de R$1.5 adicionados aos arquivos JSON e CSV
+2025-07-04 09:33:42,782 - INFO - main - Busca das ações concluida
+2025-07-04 09:35:32,786 - INFO - main - Iniciando busca das ações
+2025-07-04 09:35:34,563 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:36:00,973 - INFO - main - Tickets abaixo de R$1.5 adicionados aos arquivos JSON e CSV
+2025-07-04 09:36:00,973 - INFO - main - Busca das ações concluida
+2025-07-04 09:36:35,044 - INFO - main - Iniciando busca das ações
+2025-07-04 09:36:36,916 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:37:04,244 - INFO - main - Ticker VGIR11.SA é um FII: Valora Re III Fundo De Investimento Imobiliario
+2025-07-04 09:37:05,230 - INFO - main - Ticker BTCI11.SA é um FII: Fundo Infestimento Imobiliario Btg Pactual Credito Imobiliario
+2025-07-04 09:37:06,200 - INFO - main - Ticker KNSC11.SA é um FII: Kinea Securities Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:37:10,286 - INFO - main - Ticker WHGR11.SA é um FII: Whg Real Estate Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:37:11,237 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 26
+2025-07-04 09:37:11,237 - INFO - main - Ticker GARE11.SA é um FII: Guardian Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:37:12,420 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 25
+2025-07-04 09:37:12,420 - INFO - main - Ticker XPSF11.SA é um FII: XP Selection Fundo De Fundos De Investimento Imobiliario - FII
+2025-07-04 09:37:12,422 - INFO - main - Tickets abaixo de R$10.0 adicionados aos arquivos JSON e CSV
+2025-07-04 09:37:12,422 - INFO - main - Busca das ações concluida
+2025-07-04 09:41:25,489 - INFO - main - Iniciando busca das ações
+2025-07-04 09:41:33,824 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:42:13,091 - INFO - main - Ticker VGIR11.SA é um FII: Valora Re III Fundo De Investimento Imobiliario
+2025-07-04 09:42:14,047 - INFO - main - Ticker BTCI11.SA é um FII: Fundo Infestimento Imobiliario Btg Pactual Credito Imobiliario
+2025-07-04 09:42:15,025 - INFO - main - Ticker KNSC11.SA é um FII: Kinea Securities Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:42:15,998 - INFO - main - Ticker WHGR11.SA é um FII: Whg Real Estate Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:42:16,958 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 17
+2025-07-04 09:42:16,958 - INFO - main - Ticker GARE11.SA é um FII: Guardian Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:42:17,886 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 16
+2025-07-04 09:42:17,886 - INFO - main - Ticker XPSF11.SA é um FII: XP Selection Fundo De Fundos De Investimento Imobiliario - FII
+2025-07-04 09:42:17,888 - INFO - main - Tickets abaixo de R$10.0 adicionados aos arquivos JSON e CSV
+2025-07-04 09:42:17,888 - INFO - main - Busca das ações concluida
+2025-07-04 09:45:53,904 - INFO - main - Iniciando busca das ações
+2025-07-04 09:45:55,550 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:46:25,857 - INFO - main - Ticker VGIR11.SA é um FII: Valora Re III Fundo De Investimento Imobiliario
+2025-07-04 09:46:26,817 - INFO - main - Ticker BTCI11.SA é um FII: Fundo Infestimento Imobiliario Btg Pactual Credito Imobiliario
+2025-07-04 09:46:28,254 - INFO - main - Ticker KNSC11.SA é um FII: Kinea Securities Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:46:29,549 - INFO - main - Ticker WHGR11.SA é um FII: Whg Real Estate Fundo De Investimento Imobiliario – Fii
+2025-07-04 09:46:30,525 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 25
+2025-07-04 09:46:30,525 - INFO - main - Ticker GARE11.SA é um FII: Guardian Logistica Fundo De Investimento Imobiliario
+2025-07-04 09:46:31,493 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 24
+2025-07-04 09:46:31,493 - INFO - main - Ticker XPSF11.SA é um FII: XP Selection Fundo De Fundos De Investimento Imobiliario - FII
+2025-07-04 09:46:31,495 - INFO - main - Tickets abaixo de R$10.0 adicionados aos arquivos JSON e CSV
+2025-07-04 09:46:31,495 - INFO - main - Busca das ações concluida
+2025-07-04 11:39:13,621 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-04 11:39:15,219 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <SNLG11.SA>
+ Detalhes do erro: 'str' object has no attribute 'dividends'
+2025-07-04 11:40:19,086 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-04 11:44:50,427 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-04 11:46:05,480 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-04 11:51:05,285 - INFO - search_info_fiis - Iniciando busca das ações
