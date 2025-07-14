@@ -16,13 +16,11 @@ try:
         tickets = csv.reader(f)
         tickets = [row[0] for row in tickets if row]  # Extrai apenas os tickers
 except FileNotFoundError:
-    print("Arquivo 'alvos.csv' nao encontrado.")
     logger.error("Arquivo 'alvos.csv' nao encontrado.")
 
 
 try:
     bot = TelegramBot()
-    print("Iniciando busca das ações")
     logger.info("Iniciando busca das ações")
 
 
@@ -31,28 +29,18 @@ try:
         hist = Ticker.history(period="1mo", interval="1d")
         info = Ticker.info
         Price = info.get("regularMarketPrice")
-        dividendos = Ticker.dividends
-        if not dividendos.empty:
-            ultimo_pagamento_valor = dividendos.iloc[-1]
-            ultimo_pagamento_data = dividendos.index[-1].strftime("%Y-%m-%d")
-        else:
-            ultimo_pagamento_valor = None
-            ultimo_pagamento_data = None
+        # n = info.get("lastDividendValue")
+        # d = info.get("lastDividendDate")
+        # r = info.get("dividendRate")
+        # di = datetime.fromtimestamp(d).strftime("%d-%m-%Y")
+        # dividendos = Ticker.dividends
 
-        ex_dividend_ts = Ticker.info.get("exDividendDate")
-        ex_dividend_data = datetime.fromtimestamp(ex_dividend_ts).strftime("%d-%m-%Y") if ex_dividend_ts else None
+        dayOpen = info.get("open")
+        daylow = info.get("dayLow")
+        dayhigh = info.get("dayHigh")   
 
-        dy = Ticker.info.get("dividendYield")
-        dy_percent = round(dy if dy > 1 else dy * 100, 2)
-
-        # print("Último pagamento:", ultimo_pagamento_valor, "em", ultimo_pagamento_data)
-        # print("Próxima data com:", ex_dividend_data)
-        # print("Dividend Yield:", dy_percent, "%")
-
-        bot.send_message(f'Ticker: {tick} Preço atual R$:{Price} \n'
-                                        f'Último pagamento: R${ultimo_pagamento_valor} em {ultimo_pagamento_data}\n'
-                                        f'Próxima data com: {ex_dividend_data}\n'
-                                        f'Dividend Yield: {dy_percent}%')
+        bot.send_message(f'{tick} - Preço atual: R${Price}, Abertura: {dayOpen}, Mínimo {daylow}, Máximo: {dayhigh} \n')
+   
 except Exception as e:
-        print(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
+        bot.send_message(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
         logger.error(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")

@@ -84,3 +84,34 @@
 2025-07-04 11:44:50,427 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-04 11:46:05,480 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-04 11:51:05,285 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-11 12:03:04,359 - INFO - main - Iniciando busca das ações
+2025-07-11 12:03:09,264 - INFO - main - Ticker SNLG11.SA é um FII: Mogno Logistica Fundo De Investimento Imobiliario
+2025-07-11 12:03:44,584 - INFO - main - Ticker VGIR11.SA é um FII: Valora Re III Fundo De Investimento Imobiliario
+2025-07-11 12:03:45,868 - INFO - main - Ticker BTCI11.SA é um FII: Fundo Infestimento Imobiliario Btg Pactual Credito Imobiliario
+2025-07-11 12:03:47,218 - INFO - main - Ticker KNSC11.SA é um FII: Kinea Securities Fundo De Investimento Imobiliario – Fii
+2025-07-11 12:03:48,514 - INFO - main - Ticker WHGR11.SA é um FII: Whg Real Estate Fundo De Investimento Imobiliario – Fii
+2025-07-11 12:03:49,782 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 20
+2025-07-11 12:03:49,783 - INFO - main - Ticker GARE11.SA é um FII: Guardian Logistica Fundo De Investimento Imobiliario
+2025-07-11 12:03:51,039 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 19
+2025-07-11 12:03:51,039 - INFO - main - Ticker XPSF11.SA é um FII: XP Selection Fundo De Fundos De Investimento Imobiliario - FII
+2025-07-11 12:03:51,041 - INFO - main - Tickets abaixo de R$10.0 adicionados aos arquivos JSON e CSV
+2025-07-11 12:03:51,041 - INFO - main - Busca das ações concluida
+2025-07-14 10:26:45,568 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:47:38,664 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:50:51,462 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:52:06,244 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:53:29,817 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:55:24,582 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 12:57:40,780 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 13:12:01,008 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:36:06,939 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:37:50,218 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:47:28,605 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:48:05,996 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <VGIR11.SA>
+ Detalhes do erro: Failed to perform, curl: (16) . See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2025-07-14 17:49:59,116 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:52:13,469 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:53:21,296 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 17:59:40,970 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 18:00:35,389 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-14 18:02:31,319 - INFO - search_info_fiis - Iniciando busca das ações
