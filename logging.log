@@ -115,3 +115,6 @@
 2025-07-14 17:59:40,970 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-14 18:00:35,389 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-14 18:02:31,319 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-21 09:14:31,096 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-21 09:14:33,591 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <VGIR11.SA>
+ Detalhes do erro: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
