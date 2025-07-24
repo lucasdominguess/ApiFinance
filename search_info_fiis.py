@@ -11,12 +11,12 @@ dotenv.load_dotenv()
 keyApi = os.getenv('API_TOKEN')
 preco_alvo = float(os.getenv('PRICE_SEARCH', 5))  # Valor alvo para o preço das ações
 
-try:
-    with open("alvos.csv", "r", encoding="utf-8") as f:
-        tickets = csv.reader(f)
-        tickets = [row[0] for row in tickets if row]  # Extrai apenas os tickers
-except FileNotFoundError:
-    logger.error("Arquivo 'alvos.csv' nao encontrado.")
+# try:
+#     with open("alvos.csv", "r", encoding="utf-8") as f:
+#         tickets = csv.reader(f)
+#         tickets = [row[0] for row in tickets if row]  # Extrai apenas os tickers
+# except FileNotFoundError:
+#     logger.error("Arquivo 'alvos.csv' nao encontrado.")
 
 
 try:
@@ -25,6 +25,8 @@ try:
 
     mensagem = ""
     info_fiis = []
+    tickets = ["VGIR11.SA","WHGR11.SA","PETR4.SA"]
+
     for tick in tickets:
         Ticker = yf.Ticker(tick)
         hist = Ticker.history(period="1mo", interval="1d")
@@ -42,7 +44,7 @@ try:
 
       
         mensagem += (
-            f"📈 *{tick}*\n"
+            f"📈 {tick}\n"
             f"💰 Preço Atual: R$ {Price}\n"
             f"🔓 Abertura: R$ {dayOpen}\n"
             f"⬇️ Mínimo: R$ {daylow}\n"
@@ -51,6 +53,8 @@ try:
         )
 
     bot.send_message(mensagem)
+ 
+    logger.info("finalizando")
 except Exception as e:
         bot.send_message(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
         logger.error(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
