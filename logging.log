@@ -115,3 +115,19 @@
 2025-07-14 17:59:40,970 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-14 18:00:35,389 - INFO - search_info_fiis - Iniciando busca das ações
 2025-07-14 18:02:31,319 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-17 18:45:04,562 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-18 12:40:24,555 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-18 15:31:11,916 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:18:00,744 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:21:51,252 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:21:55,835 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <PETR4.SA>
+ Detalhes do erro: TelegramBot.send_message() got an unexpected keyword argument 'parse_mode'
+2025-07-24 13:22:23,954 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:22:28,217 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-07-24 13:23:24,429 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:23:26,530 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <VGIR11.SA>
+ Detalhes do erro: 'ticker'
+2025-07-24 13:26:11,586 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:27:30,257 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:28:22,612 - INFO - search_info_fiis - Iniciando busca das ações
+2025-07-24 13:29:31,334 - INFO - search_info_fiis - Iniciando busca das ações

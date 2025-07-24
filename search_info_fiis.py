@@ -23,7 +23,8 @@ try:
     bot = TelegramBot()
     logger.info("Iniciando busca das ações")
 
-
+    mensagem = ""
+    info_fiis = []
     for tick in tickets:
         Ticker = yf.Ticker(tick)
         hist = Ticker.history(period="1mo", interval="1d")
@@ -37,10 +38,19 @@ try:
 
         dayOpen = info.get("open")
         daylow = info.get("dayLow")
-        dayhigh = info.get("dayHigh")   
+        dayhigh = info.get("dayHigh")
 
-        bot.send_message(f'{tick} - Preço atual: R${Price}, Abertura: {dayOpen}, Mínimo {daylow}, Máximo: {dayhigh} \n')
-   
+      
+        mensagem += (
+            f"📈 *{tick}*\n"
+            f"💰 Preço Atual: R$ {Price}\n"
+            f"🔓 Abertura: R$ {dayOpen}\n"
+            f"⬇️ Mínimo: R$ {daylow}\n"
+            f"⬆️ Máximo: R$ {dayhigh}\n"
+            "-------------------------\n"
+        )
+
+    bot.send_message(mensagem)
 except Exception as e:
         bot.send_message(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
         logger.error(f"Erro ao obter informações da ação: {Ticker}\n Detalhes do erro: {e}")
