@@ -25,7 +25,7 @@ try:
 
     mensagem = ""
     info_fiis = []
-    tickets = ["VGIR11.SA","WHGR11.SA","PETR4.SA"]
+    tickets = ["VGIR11.SA","WHGR11.SA","VGHF11.SA","PETR4.SA"]
 
     for tick in tickets:
         Ticker = yf.Ticker(tick)

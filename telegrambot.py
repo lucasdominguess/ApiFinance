@@ -16,7 +16,8 @@ class TelegramBot:
 
     def send_message(self,msg: str):
         try:
-            self.bot.send_message(chat_id, msg)
+            e=self.bot.send_message(chat_id, msg,message_effect_id=True)
+            #logger.warning(e.chat.id)
             # logger.info('Mensagem via telegram enviada com sucesso')
         except Exception as e:
             logger.error(f'Erro ao enviar mensagem via Telegram: {e}')
