@@ -44,3 +44,11 @@
 2025-08-28 16:00:06,829 - INFO - search_info_fiis - finalizando
 2025-08-28 16:30:01,689 - INFO - search_info_fiis - Iniciando busca das aÃ§Ãµes
 2025-08-28 16:30:05,770 - INFO - search_info_fiis - finalizando
+2025-09-12 17:38:16,457 - INFO - search_info_fiis - Iniciando busca das ações
+2025-09-12 17:38:21,655 - INFO - search_info_fiis - finalizando
+2025-09-12 17:39:47,254 - INFO - search_info_fiis - Iniciando busca das ações
+2025-09-12 17:39:50,325 - INFO - search_info_fiis - finalizando
+2025-09-12 17:40:24,393 - INFO - search_info_fiis - Iniciando busca das ações
+2025-09-12 17:40:25,531 - INFO - search_info_fiis - finalizando
+2025-09-12 18:20:21,830 - ERROR - search_info_fiis - Erro ao obter informações da ação: yfinance.Ticker object <VGIR11.SA>
+ Detalhes do erro: name 'format_date' is not defined
