@@ -17,12 +17,12 @@ def format_date(timestamp):
     return datetime.fromtimestamp(timestamp).strftime("%d/%m/%Y")
 
 
-def get_preco_referencia(ticker, last_dividend_date):
+def get_preco_referencia(ticker, ex_dividend_timestamp):
     """
-    Busca o preço de fechamento do último pregão antes da data do dividendo.
+    Busca o preço de fechamento do último pregão antes da data ex-dividendo.
     Se cair em final de semana/feriado, volta até 7 dias atrás.
     """
-    dia = last_dividend_date - timedelta(days=1)
+    dia = datetime.fromtimestamp(ex_dividend_timestamp) - timedelta(days=1)
 
     for _ in range(7):  # tenta até 7 dias para trás
         hist = ticker.history(
@@ -52,23 +52,22 @@ try:
         dayhigh = info.get("dayHigh")
 
         lastDividendValue = info.get("lastDividendValue")
-        lastDividendTimestamp = info.get("lastDividendDate")
+        exDividendTimestamp = info.get("exDividendDate")  # <<< usamos ex-dividend date
 
         dividendRate = info.get("dividendRate")
         dividendYield = info.get("dividendYield")
-        exDividendDate = format_date(info.get("exDividendDate"))
 
         # Calcular yield do último pagamento
         yield_ultimo = None
         preco_ref = None
-        lastDividendDateFmt = None
+        exDividendDateFmt = None
 
-        if lastDividendValue and lastDividendTimestamp:
-            lastDividendDate = datetime.fromtimestamp(lastDividendTimestamp)
-            lastDividendDateFmt = lastDividendDate.strftime("%d/%m/%Y")
+        if lastDividendValue and exDividendTimestamp:
+            exDividendDate = datetime.fromtimestamp(exDividendTimestamp)
+            exDividendDateFmt = exDividendDate.strftime("%d/%m/%Y")
 
-            # pegar fechamento do dia útil anterior
-            preco_ref = get_preco_referencia(Ticker, lastDividendDate)
+            # preço do dia COM (fechamento anterior ao ex-dividend date)
+            preco_ref = get_preco_referencia(Ticker, exDividendTimestamp)
             if preco_ref:
                 yield_ultimo = (lastDividendValue / preco_ref) * 100
 
@@ -79,19 +78,19 @@ try:
             f"⬇️ Mínimo: R$ {daylow}\n"
             f"⬆️ Máximo: R$ {dayhigh}\n"
             f"📉 Último Dividendo: R$ {lastDividendValue}\n"
-            f"📆 Data Último Dividendo: {lastDividendDateFmt}\n"
+            f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
         )
 
         if preco_ref:
             mensagem += (
-                f"📊 Preço Ref. (fechamento dia anterior): R$ {preco_ref:.2f}\n"
+                f"📊 Preço Ref. (fechamento no dia COM): R$ {preco_ref:.2f}\n"
                 f"📈 Yield do Último Pagamento: {yield_ultimo:.2f}%\n"
             )
 
         mensagem += "-------------------------\n"
 
     print(mensagem)
-    # bot.send_message(mensagem)
+    bot.send_message(mensagem)
 
 except Exception as e:
     bot.send_message(f"Erro ao obter informações da ação: {tick}\n Detalhes do erro: {e}")
