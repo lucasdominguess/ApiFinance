@@ -40,7 +40,7 @@ def get_preco_referencia(ticker, ex_dividend_timestamp):
 try:
     bot = TelegramBot()
     mensagem = ""
-    tickets = ["VGIR11.SA", "WHGR11.SA", "VGHF11.SA", "PETR4.SA"]
+    tickets = ["VGIR11.SA","PETR4.SA","VGRI11.SA"]
 
     for tick in tickets:
         Ticker = yf.Ticker(tick)
