@@ -71,15 +71,39 @@ try:
             if preco_ref:
                 yield_ultimo = (lastDividendValue / preco_ref) * 100
 
+    # ... (seu código anterior: Price, dayOpen, etc) ...
+        
+        # 1. Definir o primeiro dia do mês atual
+        hoje = datetime.now()
+        inicio_mes = hoje.replace(day=1).strftime('%Y-%m-%d')
+
+        # 2. Buscar histórico do dia 1 até hoje
+        hist_mes = Ticker.history(start=inicio_mes)
+
+        # 3. Calcular Máxima e Mínima do dataframe retornado
+        if not hist_mes.empty:
+            # Pega o maior valor da coluna 'High' e o menor da 'Low'
+            max_mes = hist_mes['High'].max()
+            data_max = hist_mes['High'].idxmax().strftime('%d/%m')
+            min_mes = hist_mes['Low'].min()
+            data_min = hist_mes['Low'].idxmin().strftime('%d/%m')
+        else:
+            # Fallback caso seja o primeiro dia do mês e mercado não abriu
+            max_mes = dayhigh 
+            min_mes = daylow
+
+
         mensagem += (
-            f"📈 {tick}\n"
-            f"💰 Preço Atual: R$ {Price}\n"
-            f"🔓 Abertura: R$ {dayOpen}\n"
-            f"⬇️ Mínimo: R$ {daylow}\n"
-            f"⬆️ Máximo: R$ {dayhigh}\n"
-            f"📉 Último Dividendo: R$ {lastDividendValue}\n"
-            f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
-        )
+                    f"📈 {tick}\n"
+                    f"💰 Preço Atual: R$ {Price}\n"
+                    f"🔓 Abertura: R$ {dayOpen}\n"
+                    f"⬇️ Mínimo Dia: R$ {daylow}\n"
+                    f"⬆️ Máximo Dia: R$ {dayhigh}\n"
+                    f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n" 
+                    f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
+                    f"💲 Último Dividendo: R$ {lastDividendValue}\n"
+                    f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
+                )
 
         if preco_ref:
             mensagem += (
