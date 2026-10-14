@@ -40,7 +40,7 @@ def get_preco_referencia(ticker, ex_dividend_timestamp):
 try:
     bot = TelegramBot()
     mensagem = ""
-    tickets = ["VGIR11.SA","PETR4.SA","VGRI11.SA","GGRC11"]
+    tickets = ["VGIR11.SA","PETR4.SA","VGRI11.SA","GGRC11.SA","GARE11.SA","DIVO11.SA","BOVA11.SA"]
 
     for tick in tickets:
         Ticker = yf.Ticker(tick)
@@ -86,11 +86,13 @@ try:
             max_mes = hist_mes['High'].max()
             data_max = hist_mes['High'].idxmax().strftime('%d/%m')
             min_mes = hist_mes['Low'].min()
-            data_min = hist_mes['Low'].idxmin().strftime('%d/%m')
+            data_min = hist_mes['Low'].idxmin().strftime('%d/%m')  
         else:
             # Fallback caso seja o primeiro dia do mês e mercado não abriu
             max_mes = dayhigh 
             min_mes = daylow
+            data_min ='01-01'
+            data_max ='01-01'
 
 
         mensagem += (
