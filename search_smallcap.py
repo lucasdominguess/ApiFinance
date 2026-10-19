@@ -33,6 +33,13 @@ def get_preco_referencia(ticker, ex_dividend_timestamp):
 
     return None  # se não achou nada
 
+def calcular_aumento_percentual(valor_inicial: float, valor_final: float) -> float:
+    if valor_inicial == 0:
+        raise ValueError("O valor inicial não pode ser zero.")
+
+    aumento = ((valor_final - valor_inicial) / valor_inicial) * 100
+    return round(aumento, 2)
+
 try:
     bot = TelegramBot(token_env="BOT_TOKEN_PYTHON_SEARCH", chat_id_env="CHAT_ID_SMALLCAP")
     mensagem = ""
@@ -121,14 +128,22 @@ try:
             data_min ='01-01'
             data_max ='01-01'
 
+
+
+
+        aumento_percentual_dia = calcular_aumento_percentual(daylow, dayhigh)
+        aumento_percentual_mes= calcular_aumento_percentual(min_mes, max_mes)
+        
         mensagem += (
                     f"📈 {tick}\n"
                     f"💰 Preço Atual: R$ {Price}\n"
                     f"🔓 Abertura: R$ {dayOpen}\n"
                     f"⬇️ Mínimo Dia: R$ {daylow}\n"
                     f"⬆️ Máximo Dia: R$ {dayhigh}\n"
+                    f"Aumento percentual dia: {aumento_percentual_dia}%\n"
                     f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n"
                     f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
+                    f"Aumento percentual mês: {aumento_percentual_mes}%\n"
                     # f"💲 Último Dividendo: R$ {lastDividendValue}\n"
                     # f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
                 )
