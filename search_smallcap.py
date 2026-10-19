@@ -36,7 +36,40 @@ def get_preco_referencia(ticker, ex_dividend_timestamp):
 try:
     bot = TelegramBot(token_env="BOT_TOKEN_PYTHON_SEARCH", chat_id_env="CHAT_ID_SMALLCAP")
     mensagem = ""
-    tickets = ["VGIR11.SA","PETR4.SA",]
+    tickets = [
+    "Alpa3.SA",
+    "Anim3.SA",
+    "Axia3.SA",
+    "B3sa3.SA",
+    "Bbse3.SA",
+    "Bmgb4.SA",
+    "Cmig4.SA",
+    "Cogn3.SA",
+    "Cple3.SA",
+    "Csna3.SA",
+    "Cxse3.SA",
+    "Egie3.SA",
+    "Engi4.SA",
+    "Fesa4.SA",
+    "Grnd3.SA",
+    "Itsa4.SA",
+    "Jslg3.SA",
+    "Lavv3.SA",
+    "Mdne3.SA",
+    "Melk3.SA",
+    "Mglu3.SA",
+    "Mrve3.SA",
+    "Mtre3.SA",
+    "Pgmn3.SA",
+    "Pomo3.SA",
+    "Pomo4.SA",
+    "Rail3.SA",
+    "Recv3.SA",
+    "Rdor3.SA",
+    "Sapr4.SA",
+    "Vamo3.SA"
+]
+
 
     for tick in tickets:
         Ticker = yf.Ticker(tick)
@@ -47,8 +80,8 @@ try:
         daylow = info.get("dayLow")
         dayhigh = info.get("dayHigh")
 
-        lastDividendValue = info.get("lastDividendValue")
-        exDividendTimestamp = info.get("exDividendDate")  # <<< usamos ex-dividend date
+        # lastDividendValue = info.get("lastDividendValue")
+        # exDividendTimestamp = info.get("exDividendDate")  # <<< usamos ex-dividend date
 
         dividendRate = info.get("dividendRate")
         dividendYield = info.get("dividendYield")
@@ -58,14 +91,14 @@ try:
         preco_ref = None
         exDividendDateFmt = None
 
-        if lastDividendValue and exDividendTimestamp:
-            exDividendDate = datetime.fromtimestamp(exDividendTimestamp)
-            exDividendDateFmt = exDividendDate.strftime("%d/%m/%Y")
+        # if lastDividendValue and exDividendTimestamp:
+        #     exDividendDate = datetime.fromtimestamp(exDividendTimestamp)
+        #     exDividendDateFmt = exDividendDate.strftime("%d/%m/%Y")
 
             # preço do dia COM (fechamento anterior ao ex-dividend date)
-            preco_ref = get_preco_referencia(Ticker, exDividendTimestamp)
-            if preco_ref:
-                yield_ultimo = (lastDividendValue / preco_ref) * 100
+            # preco_ref = get_preco_referencia(Ticker, exDividendTimestamp)
+            # if preco_ref:
+            #     yield_ultimo = (lastDividendValue / preco_ref) * 100
 
         # 1. Definir o primeiro dia do mês atual
         hoje = datetime.now()
@@ -96,8 +129,8 @@ try:
                     f"⬆️ Máximo Dia: R$ {dayhigh}\n"
                     f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n"
                     f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
-                    f"💲 Último Dividendo: R$ {lastDividendValue}\n"
-                    f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
+                    # f"💲 Último Dividendo: R$ {lastDividendValue}\n"
+                    # f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
                 )
 
         mensagem += "-------------------------\n"
