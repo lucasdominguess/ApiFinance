@@ -125,8 +125,8 @@ try:
                     f"📈 {tick}\n"
                     f"💰 Preço Atual: R$ {Price}\n"
                     f"🔓 Abertura: R$ {dayOpen}\n"
-                    f"⬇️ Mínimo Dia: R$ {daylow}\n"
-                    f"⬆️ Máximo Dia: R$ {dayhigh}\n"
+                    f"⬇️  Mínimo Dia: R$ {daylow}\n"
+                    f"⬆️  Máximo Dia: R$ {dayhigh}\n"
                     f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n"
                     f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
                     # f"💲 Último Dividendo: R$ {lastDividendValue}\n"
@@ -135,8 +135,8 @@ try:
 
         mensagem += "-------------------------\n"
 
-    print(mensagem)
-    bot.send_message(mensagem)
+        print(mensagem)
+        bot.send_message(mensagem)
 
 except Exception as e:
     bot.send_message(f"Erro ao obter informações da ação: {tick}\n Detalhes do erro: {e}")

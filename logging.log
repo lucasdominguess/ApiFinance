@@ -106,3 +106,16 @@
  Detalhes do erro: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
 2026-10-19 10:19:26,826 - ERROR - seach_smallcap - Erro ao obter informações da ação: Anim3.SA
  Detalhes do erro: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-10-19 10:30:17,670 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:37:16,683 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:39:54,869 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 22
+2026-10-19 10:39:56,294 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:39:57,519 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:39:58,717 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:39:59,938 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:01,160 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:02,439 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:03,851 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:05,063 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:06,329 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2026-10-19 10:40:07,556 - ERROR - telegrambot - Erro ao enviar mensagem via Telegram (chat -1003964112486): A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
