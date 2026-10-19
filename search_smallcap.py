@@ -150,8 +150,8 @@ try:
 
         mensagem += "-------------------------\n"
 
-    print(mensagem)
-    bot.send_message(mensagem)
+        print(mensagem)
+        bot.send_message(mensagem)
 
 except Exception as e:
     bot.send_message(f"Erro ao obter informações da ação: {tick}\n Detalhes do erro: {e}")
