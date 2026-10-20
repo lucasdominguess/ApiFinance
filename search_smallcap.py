@@ -43,6 +43,7 @@ def calcular_aumento_percentual(valor_inicial: float, valor_final: float) -> flo
 try:
     bot = TelegramBot(token_env="BOT_TOKEN_PYTHON_SEARCH", chat_id_env="CHAT_ID_SMALLCAP")
     mensagem = ""
+    contador = 0  # conta quantas ações já foram adicionadas à mensagem atual
     tickets = [
     "Alpa3.SA",
     "Anim3.SA",
@@ -135,21 +136,30 @@ try:
         aumento_percentual_mes= calcular_aumento_percentual(min_mes, max_mes)
         
         mensagem += (
-                    f"📈 {tick}\n"
-                    f"💰 Preço Atual: R$ {Price}\n"
-                    f"🔓 Abertura: R$ {dayOpen}\n"
-                    f"⬇️ Mínimo Dia: R$ {daylow}\n"
-                    f"⬆️ Máximo Dia: R$ {dayhigh}\n"
-                    f"Aumento percentual dia: {aumento_percentual_dia}%\n"
-                    f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n"
-                    f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
-                    f"Aumento percentual mês: {aumento_percentual_mes}%\n"
-                    # f"💲 Último Dividendo: R$ {lastDividendValue}\n"
-                    # f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
-                )
+            f"📈 {tick}\n"
+            f"💰 Preço Atual: R$ {Price}\n"
+            f"🔓 Abertura: R$ {dayOpen}\n"
+            f"⬇️ Mínimo Dia: R$ {daylow}\n"
+            f"⬆️ Máximo Dia: R$ {dayhigh}\n"
+            f"Aumento percentual dia: {aumento_percentual_dia}%\n"
+            f"📉 Mínima Mês: R$ {min_mes:.2f} ({data_min})\n"
+            f"📈 Máxima Mês: R$ {max_mes:.2f} ({data_max})\n"
+            f"Aumento percentual mês: {aumento_percentual_mes}%\n"
+            # f"💲 Último Dividendo: R$ {lastDividendValue}\n"
+            # f"📆 Data Ex-Dividendo: {exDividendDateFmt}\n"
+            "-------------------------\n"
+        )
 
-        mensagem += "-------------------------\n"
+        contador += 1
 
+        # a cada 5 ações, envia o lote acumulado e zera a mensagem
+        if contador % 5 == 0:
+            print(mensagem)
+            bot.send_message(mensagem)
+            mensagem = ""
+
+    # envia as ações restantes (quando o total não é múltiplo de 5)
+    if mensagem:
         print(mensagem)
         bot.send_message(mensagem)
 
